@@ -41,11 +41,11 @@ export default function Layout({ children }: LayoutProps) {
             <Link href="/contact">
               <a className="text-sm font-medium hover:text-primary transition-colors">Contact</a>
             </Link>
-            <Button size="sm" asChild>
-              <Link href="/#waitlist">
-                <a>Join Waitlist</a>
-              </Link>
-            </Button>
+            <Link href="/#waitlist">
+              <a>
+                <Button size="sm">Join Waitlist</Button>
+              </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button - Show on mobile and tablets */}
@@ -82,11 +82,11 @@ export default function Layout({ children }: LayoutProps) {
               <Link href="/contact">
                 <a className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Contact</a>
               </Link>
-              <Button size="sm" asChild className="w-full">
-                <Link href="/#waitlist">
-                  <a onClick={() => setMobileMenuOpen(false)}>Join Waitlist</a>
-                </Link>
-              </Button>
+              <Link href="/#waitlist">
+                <a onClick={() => setMobileMenuOpen(false)}>
+                  <Button size="sm" className="w-full">Join Waitlist</Button>
+                </a>
+              </Link>
             </div>
           </div>
         )}

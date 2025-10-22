@@ -32,9 +32,9 @@ export default function Home() {
             <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">Mission</a>
             <a href="/blog" className="text-sm font-medium hover:text-primary transition-colors">Research</a>
             <a href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</a>
-            <Button size="sm" asChild>
-              <a href="#waitlist">Join Waitlist</a>
-            </Button>
+            <a href="#waitlist">
+              <Button size="sm">Join Waitlist</Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button - Show on mobile and tablets */}
@@ -61,9 +61,9 @@ export default function Home() {
               <a href="/about" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Mission</a>
               <a href="/blog" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Research</a>
               <a href="/contact" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-              <Button size="sm" asChild className="w-full">
-                <a href="#waitlist" onClick={() => setMobileMenuOpen(false)}>Join Waitlist</a>
-              </Button>
+              <a href="#waitlist" onClick={() => setMobileMenuOpen(false)}>
+                <Button size="sm" className="w-full">Join Waitlist</Button>
+              </a>
             </div>
           </div>
         )}
@@ -103,12 +103,12 @@ export default function Home() {
               A vision for enterprise-grade workflow automation that serves citizens, protects data, and strengthens our institutions. This is the technical plan to make it real.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg" asChild>
-                <a href="#waitlist">Join the Waitlist</a>
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg" asChild>
-                <a href="#vision">Read the Vision</a>
-              </Button>
+              <a href="#waitlist">
+                <Button size="lg" className="text-lg">Join the Waitlist</Button>
+              </a>
+              <a href="#mission">
+                <Button size="lg" variant="outline" className="text-lg">Read the Vision</Button>
+              </a>
             </div>
             <div className="pt-4 text-sm text-muted-foreground">
               <p>No product to sell yet. Just a mission and a plan.</p>
