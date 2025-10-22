@@ -1,7 +1,22 @@
 {
-  "buildCommand": "cd client && pnpm install && pnpm run build",
-  "outputDirectory": "client/dist",
-  "framework": "vite",
-  "installCommand": "pnpm install"
+  "buildCommand": "pnpm install --recursive && pnpm run build",
+  "installCommand": "pnpm install --recursive",
+  "framework": null,
+  "outputDirectory": "dist/public",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/serverless"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "functions": {
+    "api/serverless.js": {
+      "runtime": "nodejs20.x"
+    }
+  }
 }
 
