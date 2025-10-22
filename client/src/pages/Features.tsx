@@ -1,7 +1,6 @@
 import Layout from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Zap, TrendingUp, Shield, Users, Sparkles } from "lucide-react";
 
 export default function Features() {
   return (
@@ -13,320 +12,543 @@ export default function Features() {
         </nav>
 
         {/* Page Header */}
-        <div className="mb-16 text-center">
-          <h1 className="text-4xl font-bold mb-4">Stop Juggling. Start Automating.</h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Imagine getting 5 hours back every week. No more copying data between apps. No more forgetting to follow up with clients. Just smooth, automatic workflows that run while you focus on what matters.
+        <div className="mb-12">
+          <h1 className="text-4xl font-bold mb-4">Platform Features & Services</h1>
+          <p className="text-xl text-muted-foreground">
+            Enterprise-grade automation platform built on service-oriented architecture principles for maximum scalability, reliability, and interoperability.
           </p>
         </div>
 
-        {/* Hero Story Section */}
-        <div className="mb-20 p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg border border-primary/20">
-          <h2 className="text-2xl font-bold mb-4">Here's How It Works</h2>
-          <div className="space-y-4 text-muted-foreground">
-            <p className="text-lg">
-              <strong>Morning:</strong> A new client fills out your contact form. Astro AI instantly adds them to your CRM, sends a welcome email, creates a Slack notification for your team, and schedules a follow-up reminder for tomorrow.
-            </p>
-            <p className="text-lg">
-              <strong>Afternoon:</strong> A payment comes through Stripe. Astro AI updates your spreadsheet, sends a thank-you email, generates an invoice, and logs it in your accounting software.
-            </p>
-            <p className="text-lg">
-              <strong>Evening:</strong> You're done for the day. Everything that used to take you 30 minutes of copying and pasting? Already done. Automatically.
-            </p>
-          </div>
-        </div>
+        {/* Table of Contents */}
+        <Card className="mb-12 bg-muted/30">
+          <CardHeader>
+            <CardTitle className="text-lg">Table of Contents</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#core-services" className="text-primary hover:underline">1. Core Services Architecture</a></li>
+              <li><a href="#workflow-engine" className="text-primary hover:underline">2. Workflow Orchestration Engine</a></li>
+              <li><a href="#integration-layer" className="text-primary hover:underline">3. Integration Services Layer</a></li>
+              <li><a href="#data-services" className="text-primary hover:underline">4. Data Management Services</a></li>
+              <li><a href="#intelligence" className="text-primary hover:underline">5. AI Intelligence Services</a></li>
+              <li><a href="#security" className="text-primary hover:underline">6. Security & Compliance Framework</a></li>
+              <li><a href="#monitoring" className="text-primary hover:underline">7. Monitoring & Observability</a></li>
+            </ul>
+          </CardContent>
+        </Card>
 
-        {/* Simple Feature Cards */}
+        {/* Content Sections */}
         <div className="space-y-16">
           
-          {/* Connect Everything */}
-          <section>
-            <div className="flex items-center gap-3 mb-6">
-              <Zap className="w-8 h-8 text-primary" />
-              <h2 className="text-3xl font-bold">Connect Everything You Use</h2>
-            </div>
-            <p className="text-lg text-muted-foreground mb-8">
-              Your tools don't talk to each other. Astro AI fixes that. Connect your email, CRM, payment processor, spreadsheets, and more—without writing a single line of code.
-            </p>
-            
-            <img 
-              src="/feature_automate_workflow.png" 
-              alt="Connect your apps together" 
-              className="rounded-lg border border-border/50 mb-8"
-            />
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="bg-muted/20">
-                <CardHeader>
-                  <CardTitle className="text-lg">Email & Communication</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  <p>Gmail, Outlook, Slack, Teams—send messages, track responses, and never miss a follow-up.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-muted/20">
-                <CardHeader>
-                  <CardTitle className="text-lg">Sales & CRM</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  <p>Salesforce, HubSpot, Pipedrive—automatically update contacts and deals as things happen.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-muted/20">
-                <CardHeader>
-                  <CardTitle className="text-lg">Payments & Invoicing</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  <p>Stripe, PayPal, QuickBooks—track payments, send receipts, and keep your books clean.</p>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/20">
-              <p className="text-sm">
-                <strong>Real Example:</strong> When someone books a call on Calendly, Astro AI adds them to your CRM, sends them a confirmation email with your Zoom link, and adds a reminder to your calendar. All in 2 seconds.
+          {/* Core Services */}
+          <section id="core-services">
+            <h2 className="text-3xl font-bold mb-6">1. Core Services Architecture</h2>
+            <div className="space-y-6">
+              <p className="text-muted-foreground">
+                Astro AI is built on a distributed service-oriented architecture (SOA) that enables loose coupling, high availability, and horizontal scalability. Each service operates independently with well-defined interfaces and contracts.
               </p>
+              
+              <Card>
+                <CardHeader>
+                  <CardTitle>Service Registry & Discovery</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-sm text-muted-foreground">
+                    Dynamic service registration and discovery mechanism enabling services to locate and communicate with each other without hardcoded endpoints.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-sm">Capabilities</h4>
+                      <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• Automatic service registration</li>
+                        <li>• Health check monitoring</li>
+                        <li>• Load balancing</li>
+                        <li>• Failover handling</li>
+                      </ul>
+                    </div>
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-sm">Protocols</h4>
+                      <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• REST/HTTP</li>
+                        <li>• gRPC</li>
+                        <li>• WebSocket</li>
+                        <li>• Message Queue (AMQP)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>API Gateway</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Centralized entry point for all client requests, providing authentication, rate limiting, request routing, and protocol translation.
+                  </p>
+                  <div className="bg-muted/50 p-4 rounded-lg font-mono text-xs">
+                    <div className="text-primary">// API Gateway Configuration</div>
+                    <div className="mt-2">
+                      <span className="text-accent">endpoint:</span> api.astro-ai.com<br/>
+                      <span className="text-accent">version:</span> v1<br/>
+                      <span className="text-accent">rate_limit:</span> 1000 requests/minute<br/>
+                      <span className="text-accent">auth:</span> OAuth 2.0 + JWT
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </section>
 
-          {/* Save Time */}
-          <section>
-            <div className="flex items-center gap-3 mb-6">
-              <Clock className="w-8 h-8 text-primary" />
-              <h2 className="text-3xl font-bold">Get Hours Back Every Week</h2>
-            </div>
-            <p className="text-lg text-muted-foreground mb-8">
-              Stop doing the same tasks over and over. Astro AI handles the repetitive stuff so you can focus on growing your business, not managing it.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <Card className="border-primary/50">
-                <CardHeader>
-                  <Badge className="w-fit mb-2">Before Astro AI</Badge>
-                  <CardTitle className="text-lg text-muted-foreground">Your Typical Day</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground space-y-2">
-                  <p>✗ Copy client info from email to CRM (10 min)</p>
-                  <p>✗ Update spreadsheet with new sales (15 min)</p>
-                  <p>✗ Send follow-up emails manually (20 min)</p>
-                  <p>✗ Check multiple apps for updates (30 min)</p>
-                  <p>✗ Generate weekly reports (45 min)</p>
-                  <p className="pt-2 font-bold text-destructive">Total: 2 hours of busywork</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-primary bg-primary/5">
-                <CardHeader>
-                  <Badge className="w-fit mb-2 bg-primary">With Astro AI</Badge>
-                  <CardTitle className="text-lg">Your New Day</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm space-y-2">
-                  <p>✓ Client info auto-syncs everywhere (0 min)</p>
-                  <p>✓ Spreadsheet updates itself (0 min)</p>
-                  <p>✓ Follow-ups sent automatically (0 min)</p>
-                  <p>✓ Get one daily summary email (2 min)</p>
-                  <p>✓ Reports generate themselves (0 min)</p>
-                  <p className="pt-2 font-bold text-primary">Total: 2 minutes. That's it.</p>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="mt-6 p-4 bg-accent/10 rounded-lg border border-accent/20">
-              <p className="text-sm">
-                <strong>Real Example:</strong> A freelance designer used to spend 5 hours a week on admin tasks. Now? 15 minutes. She uses the extra time to take on 2 more clients per month.
+          {/* Workflow Engine */}
+          <section id="workflow-engine">
+            <h2 className="text-3xl font-bold mb-6">2. Workflow Orchestration Engine</h2>
+            <div className="space-y-6">
+              <p className="text-muted-foreground">
+                State-machine-based workflow engine supporting complex business process automation with conditional logic, parallel execution, and error handling.
               </p>
-            </div>
-          </section>
 
-          {/* Scale Without Hiring */}
-          <section>
-            <div className="flex items-center gap-3 mb-6">
-              <TrendingUp className="w-8 h-8 text-primary" />
-              <h2 className="text-3xl font-bold">Grow Without Hiring More People</h2>
-            </div>
-            <p className="text-lg text-muted-foreground mb-8">
-              Handle 10 clients or 100 clients with the same effort. Astro AI scales with you, so you can grow your business without growing your stress.
-            </p>
+              <img 
+                src="/feature_automate_workflow.png" 
+                alt="Workflow orchestration architecture" 
+                className="rounded-lg border border-border/50 mb-6"
+              />
 
-            <img 
-              src="/blog_scale_refined.png" 
-              alt="Scale your business automatically" 
-              className="rounded-lg border border-border/50 mb-8"
-            />
+              <div className="grid md:grid-cols-3 gap-4">
+                <Card>
+                  <CardHeader>
+                    <Badge className="w-fit mb-2">Service</Badge>
+                    <CardTitle className="text-base">Workflow Designer</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-sm text-muted-foreground">
+                    Visual workflow builder with drag-and-drop interface for creating automation sequences without code.
+                  </CardContent>
+                </Card>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold">What This Means for You</h3>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">→</span>
-                    <span>Take on more clients without working longer hours</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">→</span>
-                    <span>Deliver consistent quality even when you're busy</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">→</span>
-                    <span>Never drop the ball on follow-ups or deadlines</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">→</span>
-                    <span>Keep your personal touch while automating the boring stuff</span>
-                  </li>
-                </ul>
+                <Card>
+                  <CardHeader>
+                    <Badge className="w-fit mb-2">Service</Badge>
+                    <CardTitle className="text-base">Execution Engine</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-sm text-muted-foreground">
+                    Distributed execution runtime with support for parallel processing, retries, and compensation logic.
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <Badge className="w-fit mb-2">Service</Badge>
+                    <CardTitle className="text-base">State Manager</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-sm text-muted-foreground">
+                    Persistent state storage with ACID guarantees for workflow execution tracking and recovery.
+                  </CardContent>
+                </Card>
               </div>
 
               <Card className="bg-muted/20">
                 <CardHeader>
-                  <CardTitle className="text-lg">Real Numbers</CardTitle>
+                  <CardTitle className="text-lg">Workflow Patterns Supported</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-3 text-sm">
-                  <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Clients handled per week</span>
-                    <span className="text-2xl font-bold text-primary">3x more</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Time spent on admin</span>
-                    <span className="text-2xl font-bold text-primary">-80%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Missed follow-ups</span>
-                    <span className="text-2xl font-bold text-primary">Zero</span>
+                <CardContent>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold mb-3">Control Flow Patterns</h4>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li>→ Sequential execution</li>
+                        <li>→ Parallel split & synchronization</li>
+                        <li>→ Exclusive choice (XOR)</li>
+                        <li>→ Multi-choice (OR)</li>
+                        <li>→ Loop & iteration</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3">Data Patterns</h4>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li>→ Task data passing</li>
+                        <li>→ Workflow data transformation</li>
+                        <li>→ Case data management</li>
+                        <li>→ External data integration</li>
+                        <li>→ Data-based routing</li>
+                      </ul>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
             </div>
           </section>
 
-          {/* Smart Insights */}
-          <section>
-            <div className="flex items-center gap-3 mb-6">
-              <Sparkles className="w-8 h-8 text-primary" />
-              <h2 className="text-3xl font-bold">See What's Working (And What's Not)</h2>
-            </div>
-            <p className="text-lg text-muted-foreground mb-8">
-              Astro AI doesn't just automate—it learns. Get insights about your business that help you make smarter decisions.
-            </p>
-
-            <img 
-              src="/feature_ai_insights.png" 
-              alt="Get smart insights from your data" 
-              className="rounded-lg border border-border/50 mb-8"
-            />
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="bg-muted/20">
-                <CardHeader>
-                  <CardTitle className="text-base">Spot Trends Early</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  <p>See which clients are most engaged, which services are selling best, and where you should focus your energy.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-muted/20">
-                <CardHeader>
-                  <CardTitle className="text-base">Catch Problems Fast</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  <p>Get alerts when something unusual happens—like a client going quiet or a workflow breaking.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-muted/20">
-                <CardHeader>
-                  <CardTitle className="text-base">Make Better Decisions</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  <p>See your business in one place. No more guessing. Just clear data that tells you what to do next.</p>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/20">
-              <p className="text-sm">
-                <strong>Real Example:</strong> A consultant noticed that clients who got a follow-up within 24 hours were 3x more likely to book. Astro AI now sends those follow-ups automatically.
+          {/* Integration Layer */}
+          <section id="integration-layer">
+            <h2 className="text-3xl font-bold mb-6">3. Integration Services Layer</h2>
+            <div className="space-y-6">
+              <p className="text-muted-foreground">
+                Enterprise Service Bus (ESB) architecture enabling seamless integration with external systems through standardized adapters and connectors.
               </p>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Integration Patterns</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="border-l-2 border-primary pl-4">
+                      <h4 className="font-semibold mb-2">Message-Oriented Middleware</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Asynchronous message passing with guaranteed delivery, message transformation, and content-based routing.
+                      </p>
+                    </div>
+                    <div className="border-l-2 border-accent pl-4">
+                      <h4 className="font-semibold mb-2">Request-Response</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Synchronous API calls with timeout handling, circuit breakers, and automatic retry logic.
+                      </p>
+                    </div>
+                    <div className="border-l-2 border-secondary pl-4">
+                      <h4 className="font-semibold mb-2">Event-Driven Architecture</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Pub/sub event streaming for real-time data synchronization and reactive workflows.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base">Pre-built Connectors</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="text-sm text-muted-foreground space-y-2">
+                      <li>✓ Email (SMTP, IMAP, Exchange)</li>
+                      <li>✓ CRM (Salesforce, HubSpot)</li>
+                      <li>✓ Payment (Stripe, PayPal)</li>
+                      <li>✓ Database (SQL, NoSQL)</li>
+                      <li>✓ Cloud Storage (S3, Azure)</li>
+                      <li>✓ Collaboration (Slack, Teams)</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base">Custom Integration SDK</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="text-sm text-muted-foreground space-y-2">
+                      <li>✓ REST API adapter framework</li>
+                      <li>✓ SOAP/XML integration</li>
+                      <li>✓ GraphQL support</li>
+                      <li>✓ Webhook handlers</li>
+                      <li>✓ FTP/SFTP connectors</li>
+                      <li>✓ Custom protocol adapters</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </section>
 
-          {/* Secure & Reliable */}
-          <section>
-            <div className="flex items-center gap-3 mb-6">
-              <Shield className="w-8 h-8 text-primary" />
-              <h2 className="text-3xl font-bold">Your Data is Safe. Period.</h2>
-            </div>
-            <p className="text-lg text-muted-foreground mb-8">
-              We take security seriously. Your client data, payment info, and business information are protected with the same security used by banks and governments.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <Card className="bg-muted/20">
-                <CardHeader>
-                  <CardTitle className="text-lg">What This Means in Plain English</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground space-y-3">
-                  <p>✓ Your data is encrypted (scrambled so only you can read it)</p>
-                  <p>✓ We never sell or share your information</p>
-                  <p>✓ You can export or delete your data anytime</p>
-                  <p>✓ We back up everything so you never lose work</p>
-                  <p>✓ 99.9% uptime—we're always running</p>
-                </CardContent>
-              </Card>
+          {/* Data Services */}
+          <section id="data-services">
+            <h2 className="text-3xl font-bold mb-6">4. Data Management Services</h2>
+            <div className="space-y-6">
+              <p className="text-muted-foreground">
+                Distributed data layer with multi-model database support, caching, and data synchronization across services.
+              </p>
 
               <Card className="bg-muted/20">
                 <CardHeader>
-                  <CardTitle className="text-lg">Trusted By</CardTitle>
+                  <CardTitle>Data Architecture Components</CardTitle>
                 </CardHeader>
-                <CardContent className="text-sm text-muted-foreground space-y-3">
-                  <p>• Freelancers handling sensitive client work</p>
-                  <p>• Agencies managing multiple accounts</p>
-                  <p>• Consultants with confidential data</p>
-                  <p>• Small businesses processing payments</p>
-                  <p>• Teams collaborating across time zones</p>
+                <CardContent>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="font-semibold mb-3 flex items-center gap-2">
+                        <Badge variant="outline">Layer 1</Badge>
+                        Distributed Cache
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Redis-based in-memory cache with automatic invalidation and cache-aside pattern implementation.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3 flex items-center gap-2">
+                        <Badge variant="outline">Layer 2</Badge>
+                        Primary Data Store
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        PostgreSQL for transactional data with ACID guarantees, read replicas, and automatic failover.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3 flex items-center gap-2">
+                        <Badge variant="outline">Layer 3</Badge>
+                        Document Store
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        MongoDB for flexible schema storage, workflow state, and audit logs with horizontal sharding.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3 flex items-center gap-2">
+                        <Badge variant="outline">Layer 4</Badge>
+                        Object Storage
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        S3-compatible storage for files, attachments, and large binary objects with CDN integration.
+                      </p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>
           </section>
 
-          {/* Team Collaboration */}
-          <section>
-            <div className="flex items-center gap-3 mb-6">
-              <Users className="w-8 h-8 text-primary" />
-              <h2 className="text-3xl font-bold">Work Together, Stay in Sync</h2>
+          {/* AI Intelligence */}
+          <section id="intelligence">
+            <h2 className="text-3xl font-bold mb-6">5. AI Intelligence Services</h2>
+            <div className="space-y-6">
+              <p className="text-muted-foreground">
+                Machine learning pipeline and AI services for predictive analytics, natural language processing, and intelligent automation.
+              </p>
+
+              <img 
+                src="/feature_ai_insights.png" 
+                alt="AI intelligence services architecture" 
+                className="rounded-lg border border-border/50 mb-6"
+              />
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base">ML Model Registry</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-sm text-muted-foreground space-y-2">
+                    <p>Centralized repository for trained models with versioning, A/B testing, and rollback capabilities.</p>
+                    <ul className="space-y-1 mt-3">
+                      <li>• Model versioning & lineage</li>
+                      <li>• Performance metrics tracking</li>
+                      <li>• Automated retraining pipelines</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base">Inference Engine</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-sm text-muted-foreground space-y-2">
+                    <p>Real-time prediction service with auto-scaling and sub-100ms latency for production workloads.</p>
+                    <ul className="space-y-1 mt-3">
+                      <li>• Batch & real-time inference</li>
+                      <li>• GPU acceleration support</li>
+                      <li>• Model serving optimization</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>AI Capabilities</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">
+                    <div>
+                      <h4 className="font-semibold mb-2">NLP Services</h4>
+                      <ul className="text-muted-foreground space-y-1">
+                        <li>• Sentiment analysis</li>
+                        <li>• Entity extraction</li>
+                        <li>• Text classification</li>
+                        <li>• Language detection</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Predictive Analytics</h4>
+                      <ul className="text-muted-foreground space-y-1">
+                        <li>• Trend forecasting</li>
+                        <li>• Anomaly detection</li>
+                        <li>• Churn prediction</li>
+                        <li>• Revenue modeling</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Optimization</h4>
+                      <ul className="text-muted-foreground space-y-1">
+                        <li>• Workflow optimization</li>
+                        <li>• Resource allocation</li>
+                        <li>• Cost optimization</li>
+                        <li>• Performance tuning</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
-            <p className="text-lg text-muted-foreground mb-8">
-              Whether you're solo or have a team, everyone stays on the same page. No more "Did you send that email?" or "Where's that file?"
-            </p>
+          </section>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="bg-muted/20">
+          {/* Security */}
+          <section id="security">
+            <h2 className="text-3xl font-bold mb-6">6. Security & Compliance Framework</h2>
+            <div className="space-y-6">
+              <p className="text-muted-foreground">
+                Enterprise-grade security architecture with defense-in-depth strategy, zero-trust principles, and comprehensive compliance controls.
+              </p>
+
+              <Card className="border-primary/50">
                 <CardHeader>
-                  <CardTitle className="text-base">Share Workflows</CardTitle>
+                  <CardTitle>Security Layers</CardTitle>
                 </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  <p>Build an automation once, share it with your team. Everyone uses the same process.</p>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="font-semibold mb-3">Authentication & Authorization</h4>
+                        <ul className="text-sm text-muted-foreground space-y-2">
+                          <li>✓ OAuth 2.0 / OpenID Connect</li>
+                          <li>✓ Multi-factor authentication (MFA)</li>
+                          <li>✓ Role-based access control (RBAC)</li>
+                          <li>✓ Attribute-based access control (ABAC)</li>
+                          <li>✓ SSO integration (SAML, LDAP)</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-3">Data Protection</h4>
+                        <ul className="text-sm text-muted-foreground space-y-2">
+                          <li>✓ End-to-end encryption (AES-256)</li>
+                          <li>✓ TLS 1.3 for data in transit</li>
+                          <li>✓ Key management service (KMS)</li>
+                          <li>✓ Data masking & tokenization</li>
+                          <li>✓ Encryption at rest</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-muted/20">
+              <Card>
                 <CardHeader>
-                  <CardTitle className="text-base">See Who Did What</CardTitle>
+                  <CardTitle>Compliance Certifications</CardTitle>
                 </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  <p>Track every action. Know exactly what happened and when, so nothing falls through the cracks.</p>
+                <CardContent>
+                  <div className="grid md:grid-cols-4 gap-4">
+                    <div className="text-center p-4 border border-border rounded-lg">
+                      <div className="font-bold text-primary mb-1">SOC 2 Type II</div>
+                      <div className="text-xs text-muted-foreground">Security & Availability</div>
+                    </div>
+                    <div className="text-center p-4 border border-border rounded-lg">
+                      <div className="font-bold text-primary mb-1">GDPR</div>
+                      <div className="text-xs text-muted-foreground">EU Data Protection</div>
+                    </div>
+                    <div className="text-center p-4 border border-border rounded-lg">
+                      <div className="font-bold text-primary mb-1">CCPA</div>
+                      <div className="text-xs text-muted-foreground">California Privacy</div>
+                    </div>
+                    <div className="text-center p-4 border border-border rounded-lg">
+                      <div className="font-bold text-primary mb-1">ISO 27001</div>
+                      <div className="text-xs text-muted-foreground">Information Security</div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
+            </div>
+          </section>
+
+          {/* Monitoring */}
+          <section id="monitoring">
+            <h2 className="text-3xl font-bold mb-6">7. Monitoring & Observability</h2>
+            <div className="space-y-6">
+              <p className="text-muted-foreground">
+                Comprehensive observability stack with distributed tracing, metrics collection, and centralized logging for full system visibility.
+              </p>
+
+              <img 
+                src="/command_center_refined_v2.png" 
+                alt="Monitoring and observability dashboard" 
+                className="rounded-lg border border-border/50 mb-6"
+              />
+
+              <div className="grid md:grid-cols-3 gap-4">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base">Metrics & Telemetry</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-sm text-muted-foreground">
+                    <ul className="space-y-2">
+                      <li>• Service health metrics</li>
+                      <li>• Performance counters</li>
+                      <li>• Resource utilization</li>
+                      <li>• Custom business metrics</li>
+                      <li>• SLA tracking</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base">Distributed Tracing</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-sm text-muted-foreground">
+                    <ul className="space-y-2">
+                      <li>• Request flow visualization</li>
+                      <li>• Latency analysis</li>
+                      <li>• Error propagation tracking</li>
+                      <li>• Service dependency mapping</li>
+                      <li>• Performance bottleneck detection</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base">Centralized Logging</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-sm text-muted-foreground">
+                    <ul className="space-y-2">
+                      <li>• Structured log aggregation</li>
+                      <li>• Full-text search</li>
+                      <li>• Log correlation</li>
+                      <li>• Audit trail</li>
+                      <li>• Retention policies</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
 
               <Card className="bg-muted/20">
                 <CardHeader>
-                  <CardTitle className="text-base">Set Permissions</CardTitle>
+                  <CardTitle>Alerting & Incident Response</CardTitle>
                 </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  <p>Control who can see what. Keep sensitive data private while letting your team collaborate.</p>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Intelligent alerting system with anomaly detection, escalation policies, and automated incident response workflows.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <h4 className="font-semibold mb-2">Alert Channels</h4>
+                      <ul className="text-muted-foreground space-y-1">
+                        <li>→ Email notifications</li>
+                        <li>→ SMS/Phone alerts</li>
+                        <li>→ Slack/Teams integration</li>
+                        <li>→ PagerDuty integration</li>
+                        <li>→ Webhook callbacks</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Response Automation</h4>
+                      <ul className="text-muted-foreground space-y-1">
+                        <li>→ Auto-scaling triggers</li>
+                        <li>→ Circuit breaker activation</li>
+                        <li>→ Failover orchestration</li>
+                        <li>→ Self-healing workflows</li>
+                        <li>→ Incident documentation</li>
+                      </ul>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -335,22 +557,19 @@ export default function Features() {
         </div>
 
         {/* CTA */}
-        <div className="mt-20 p-8 border border-border/50 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 text-center">
-          <h3 className="text-2xl font-bold mb-4">Ready to Get Your Time Back?</h3>
-          <p className="text-muted-foreground mb-6 text-lg">
-            Start with 5 free automations. No credit card. No commitment. Just see what's possible.
+        <div className="mt-16 p-8 border border-border/50 rounded-lg bg-muted/20 text-center">
+          <h3 className="text-2xl font-bold mb-4">Ready to Implement Enterprise Automation?</h3>
+          <p className="text-muted-foreground mb-6">
+            Start with 5 free automation workflows. No credit card required. Full API access included.
           </p>
           <div className="flex gap-4 justify-center">
             <a href="/#signup" className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors">
               Start Free Trial
             </a>
-            <a href="/pricing" className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 text-sm font-medium hover:bg-muted transition-colors">
-              See Pricing
+            <a href="/contact" className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 text-sm font-medium hover:bg-muted transition-colors">
+              Contact Sales
             </a>
           </div>
-          <p className="text-sm text-muted-foreground mt-4">
-            Join 10,000+ professionals who've automated their workflow
-          </p>
         </div>
       </div>
     </Layout>
