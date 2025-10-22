@@ -2,7 +2,8 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Zap, TrendingUp, Target, Mail, Shield, AlertCircle, FileText } from "lucide-react";
+import { Check, Zap, TrendingUp, Target, Mail, Shield, AlertCircle, FileText, Menu, X } from "lucide-react";
+import { useState } from "react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { WaitlistForm } from "@/components/WaitlistForm";
 
@@ -10,19 +11,22 @@ export default function Home() {
   // The userAuth hooks provides authentication state
   // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
   let { user, loading, error, isAuthenticated, logout } = useAuth();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navigation */}
       <nav className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container flex h-16 items-center justify-between">
-          <a href="/" className="flex items-center gap-3">
-            <img src="/astro-ai-logo.png" alt="Astro AI" className="h-8 w-8 flex-shrink-0" />
-            <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
+          <a href="/" className="flex items-center gap-2 sm:gap-3">
+            <img src="/astro-ai-logo.png" alt="Astro AI" className="h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0" />
+            <div className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
               Astro AI
             </div>
           </a>
-          <div className="flex items-center gap-6">
+          
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-6">
             <a href="/features" className="text-sm font-medium hover:text-primary transition-colors">Technical Specs</a>
             <a href="/pricing" className="text-sm font-medium hover:text-primary transition-colors">Roadmap</a>
             <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">Mission</a>
@@ -32,7 +36,32 @@ export default function Home() {
               <a href="#waitlist">Join Waitlist</a>
             </Button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden border-t border-border/40 bg-background">
+            <div className="container py-4 flex flex-col gap-4">
+              <a href="/features" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Technical Specs</a>
+              <a href="/pricing" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Roadmap</a>
+              <a href="/about" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Mission</a>
+              <a href="/blog" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Research</a>
+              <a href="/contact" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+              <Button size="sm" asChild className="w-full">
+                <a href="#waitlist" onClick={() => setMobileMenuOpen(false)}>Join Waitlist</a>
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Status Banner */}
