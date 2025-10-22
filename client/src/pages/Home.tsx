@@ -1,10 +1,16 @@
+import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Zap, TrendingUp, Target, Mail, Shield, AlertCircle, FileText } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { WaitlistForm } from "@/components/WaitlistForm";
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navigation */}
@@ -417,42 +423,8 @@ export default function Home() {
                 Get updates on development progress. No spam. No sales pitches. Just honest updates from someone trying to build something that matters.
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <form className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Name</label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-2 rounded-md bg-background border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Email</label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-2 rounded-md bg-background border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Why are you interested? (optional)</label>
-                  <textarea
-                    rows={3}
-                    className="w-full px-4 py-2 rounded-md bg-background border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                    placeholder="Tell me what resonates with you about this vision..."
-                  ></textarea>
-                </div>
-                <Button type="submit" className="w-full" size="lg">
-                  Join the Waitlist
-                </Button>
-              </form>
-              <div className="text-center text-sm text-muted-foreground space-y-2">
-                <p>No commitment. No payment. Just updates.</p>
-                <p>You can unsubscribe anytime.</p>
-              </div>
+            <CardContent>
+              <WaitlistForm />
             </CardContent>
           </Card>
         </div>
