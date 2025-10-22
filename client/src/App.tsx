@@ -1,4 +1,5 @@
 import { Toaster } from "@/components/ui/sonner";
+import SecretFairyHelper from "./components/SecretFairyHelper";
 
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
@@ -39,6 +40,7 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider defaultTheme="dark">
         <Toaster />
+        <SecretFairyHelper />
         <Router />
       </ThemeProvider>
     </ErrorBoundary>
