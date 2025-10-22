@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Zap, TrendingUp, Target, Mail } from "lucide-react";
+import { Check, Zap, TrendingUp, Target, Mail, Shield, AlertCircle, FileText } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
 export default function Home() {
@@ -17,18 +17,29 @@ export default function Home() {
             </div>
           </a>
           <div className="flex items-center gap-6">
-            <a href="/features" className="text-sm font-medium hover:text-primary transition-colors">Features</a>
-            <a href="/pricing" className="text-sm font-medium hover:text-primary transition-colors">Pricing</a>
-            <a href="/integrations" className="text-sm font-medium hover:text-primary transition-colors">Integrations</a>
-            <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</a>
-            <a href="/blog" className="text-sm font-medium hover:text-primary transition-colors">Blog</a>
+            <a href="/features" className="text-sm font-medium hover:text-primary transition-colors">Technical Specs</a>
+            <a href="/pricing" className="text-sm font-medium hover:text-primary transition-colors">Roadmap</a>
+            <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">Mission</a>
+            <a href="/blog" className="text-sm font-medium hover:text-primary transition-colors">Research</a>
             <a href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</a>
             <Button size="sm" asChild>
-              <a href="#signup">Start Free</a>
+              <a href="#waitlist">Join Waitlist</a>
             </Button>
           </div>
         </div>
       </nav>
+
+      {/* Status Banner */}
+      <div className="bg-primary/10 border-b border-primary/20 py-3">
+        <div className="container">
+          <div className="flex items-center justify-center gap-2 text-sm">
+            <AlertCircle className="w-4 h-4 text-primary" />
+            <span className="font-medium">Development Status:</span>
+            <span className="text-muted-foreground">Technical manifesto and architecture design phase</span>
+            <a href="#roadmap" className="text-primary hover:underline ml-2">View Roadmap →</a>
+          </div>
+        </div>
+      </div>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
@@ -37,352 +48,451 @@ export default function Home() {
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         </div>
         <div className="container relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <Badge className="w-fit" variant="secondary">
-                <Zap className="w-3 h-3 mr-1" />
-                AI-Powered Automation
-              </Badge>
-              <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
-                Automate Your Workflow.{" "}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Scale Your Business.
-                </span>
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-xl">
-                Stop juggling tools. Astro AI connects your apps, automates client work, and gives you back hours every day.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg" asChild>
-                  <a href="#cta">Start Free Trial</a>
-                </Button>
-                <Button size="lg" variant="outline" className="text-lg" asChild>
-                  <a href="#features">See How It Works</a>
-                </Button>
-              </div>
-              <div className="flex items-center gap-8 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-primary" />
-                  No credit card required
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-primary" />
-                  5 automations free
-                </div>
-              </div>
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <Badge className="w-fit mx-auto" variant="secondary">
+              <FileText className="w-3 h-3 mr-1" />
+              Technical Manifesto
+            </Badge>
+            <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
+              Building Secure Automation{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                For the Public Good
+              </span>
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              A vision for enterprise-grade workflow automation that serves citizens, protects data, and strengthens our institutions. This is the technical plan to make it real.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="text-lg" asChild>
+                <a href="#waitlist">Join the Waitlist</a>
+              </Button>
+              <Button size="lg" variant="outline" className="text-lg" asChild>
+                <a href="#vision">Read the Vision</a>
+              </Button>
             </div>
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 blur-3xl" />
-              <img
-                src="/command_center_refined_v2.png"
-                alt="Astro AI Command Center Dashboard"
-                className="relative rounded-lg shadow-2xl border border-border/50 hover:scale-105 transition-transform duration-500"
-              />
+            <div className="pt-4 text-sm text-muted-foreground">
+              <p>No product to sell yet. Just a mission and a plan.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-20 lg:py-32 bg-muted/30">
-        <div className="container">
+      {/* The Problem Section */}
+      <section className="py-20 lg:py-32 bg-muted/30">
+        <div className="container max-w-5xl">
+          <div className="text-center space-y-4 mb-16">
+            <Badge variant="secondary" className="w-fit mx-auto">
+              <AlertCircle className="w-3 h-3 mr-1" />
+              The Problem
+            </Badge>
+            <h2 className="text-3xl lg:text-5xl font-bold">
+              Our Systems Are Breaking Down
+            </h2>
+          </div>
+
+          <div className="prose prose-invert max-w-none space-y-8">
+            <Card className="bg-card/50 backdrop-blur border-destructive/50">
+              <CardHeader>
+                <CardTitle className="text-2xl">Why This Matters Now</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 text-muted-foreground">
+                <p className="text-lg">
+                  While institutions like the Library of Congress face defunding and PBS struggles to survive, we're losing the infrastructure that keeps our society informed and connected. At the same time, small businesses, freelancers, and agencies are drowning in administrative work—spending hours on tasks that could be automated.
+                </p>
+                <p className="text-lg">
+                  The tools exist to fix this. But they're either too expensive, too complicated, or controlled by companies that don't have the public interest at heart.
+                </p>
+                <div className="grid md:grid-cols-2 gap-6 pt-6">
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-foreground">Current State:</h4>
+                    <ul className="space-y-1 text-sm">
+                      <li>→ Public institutions underfunded and understaffed</li>
+                      <li>→ Small businesses waste 40% of time on admin</li>
+                      <li>→ Automation tools are expensive or vendor-locked</li>
+                      <li>→ Data privacy is an afterthought</li>
+                      <li>→ Critical infrastructure is fragile</li>
+                    </ul>
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-foreground">What We Need:</h4>
+                    <ul className="space-y-1 text-sm">
+                      <li>→ Accessible automation for everyone</li>
+                      <li>→ Government-grade security by default</li>
+                      <li>→ Transparent, trustworthy systems</li>
+                      <li>→ Tools that serve the public good</li>
+                      <li>→ Infrastructure built to last</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* The Vision Section */}
+      <section id="vision" className="py-20 lg:py-32">
+        <div className="container max-w-5xl">
           <div className="text-center space-y-4 mb-16">
             <Badge variant="secondary" className="w-fit mx-auto">
               <Target className="w-3 h-3 mr-1" />
-              Features
+              The Vision
             </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold">
-              Everything You Need to{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Work Smarter
-              </span>
+              What Astro AI Will Be
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Built for freelancers and agencies who want to focus on creative work, not repetitive tasks.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <AnimatedSection delay={0}>
-              <Card className="border-border/50 bg-card/50 backdrop-blur hover:border-primary/50 transition-all duration-300 h-full">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Zap className="w-6 h-6 text-primary" />
-                  </div>
-                  <CardTitle>Automate Client Work</CardTitle>
-                  <CardDescription>
-                    Connect email, databases, and payment systems. Let AI handle the busywork while you focus on strategy.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <img
-                    src="/feature_automate_workflow.png"
-                    alt="Automate workflows"
-                    className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300"
-                  />
-                </CardContent>
-              </Card>
-            </AnimatedSection>
+          <div className="space-y-12">
+            <div className="prose prose-invert max-w-none">
+              <p className="text-xl text-muted-foreground">
+                Astro AI is a vision for enterprise-grade workflow automation that's accessible, secure, and built for the public good. Not a product to sell—a system to build trust in.
+              </p>
+            </div>
 
-            <AnimatedSection delay={100}>
-              <Card className="border-border/50 bg-card/50 backdrop-blur hover:border-accent/50 transition-all duration-300 h-full">
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="bg-card/50 backdrop-blur">
                 <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                    <TrendingUp className="w-6 h-6 text-accent" />
-                  </div>
-                  <CardTitle>Scale Up, Stress Down</CardTitle>
-                  <CardDescription>
-                    Handle more clients without hiring more people. Astro AI grows with your business.
-                  </CardDescription>
+                  <Shield className="w-8 h-8 text-primary mb-2" />
+                  <CardTitle>Government-Grade Security</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <img
-                    src="/blog_scale_refined.png"
-                    alt="Scale your business"
-                    className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300"
-                  />
+                <CardContent className="text-sm text-muted-foreground space-y-2">
+                  <p>Built with the same security standards used by federal agencies:</p>
+                  <ul className="space-y-1 ml-4">
+                    <li>• End-to-end encryption (AES-256)</li>
+                    <li>• Zero-trust architecture</li>
+                    <li>• SOC 2 Type II compliance</li>
+                    <li>• Regular security audits</li>
+                    <li>• Data sovereignty guarantees</li>
+                  </ul>
                 </CardContent>
               </Card>
-            </AnimatedSection>
 
-            <AnimatedSection delay={200}>
-              <Card className="border-border/50 bg-card/50 backdrop-blur hover:border-secondary/50 transition-all duration-300 h-full">
+              <Card className="bg-card/50 backdrop-blur">
                 <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-                    <Target className="w-6 h-6 text-secondary" />
-                  </div>
-                  <CardTitle>AI Insights</CardTitle>
-                  <CardDescription>
-                    Get actionable insights from your data. Spot trends, optimize workflows, and make smarter decisions.
-                  </CardDescription>
+                  <Zap className="w-8 h-8 text-primary mb-2" />
+                  <CardTitle>Accessible to Everyone</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <img
-                    src="/feature_ai_insights.png"
-                    alt="AI-powered insights"
-                    className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300"
-                  />
+                <CardContent className="text-sm text-muted-foreground space-y-2">
+                  <p>Powerful automation shouldn't require a CS degree or big budget:</p>
+                  <ul className="space-y-1 ml-4">
+                    <li>• No-code workflow builder</li>
+                    <li>• Free tier for individuals</li>
+                    <li>• Transparent pricing</li>
+                    <li>• Comprehensive documentation</li>
+                    <li>• Community-driven development</li>
+                  </ul>
                 </CardContent>
               </Card>
-            </AnimatedSection>
+
+              <Card className="bg-card/50 backdrop-blur">
+                <CardHeader>
+                  <TrendingUp className="w-8 h-8 text-primary mb-2" />
+                  <CardTitle>Built to Scale</CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground space-y-2">
+                  <p>Infrastructure designed for reliability and growth:</p>
+                  <ul className="space-y-1 ml-4">
+                    <li>• Microservices architecture</li>
+                    <li>• Multi-region deployment</li>
+                    <li>• 99.99% uptime SLA</li>
+                    <li>• Automatic scaling</li>
+                    <li>• Disaster recovery built-in</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card/50 backdrop-blur">
+                <CardHeader>
+                  <FileText className="w-8 h-8 text-primary mb-2" />
+                  <CardTitle>Transparent & Open</CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground space-y-2">
+                  <p>No black boxes. No vendor lock-in. Just honest technology:</p>
+                  <ul className="space-y-1 ml-4">
+                    <li>• Open documentation</li>
+                    <li>• Clear data policies</li>
+                    <li>• Export your data anytime</li>
+                    <li>• Public roadmap</li>
+                    <li>• Community feedback loops</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 lg:py-32">
-        <div className="container">
+      {/* Technical Architecture Preview */}
+      <section className="py-20 lg:py-32 bg-muted/30">
+        <div className="container max-w-5xl">
           <div className="text-center space-y-4 mb-16">
+            <Badge variant="secondary" className="w-fit mx-auto">
+              <Zap className="w-3 h-3 mr-1" />
+              Technical Architecture
+            </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold">
-              Simple Pricing. No Surprises.
+              How It Will Work
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Start free, upgrade when you're ready. Cancel anytime.
+            <p className="text-xl text-muted-foreground">
+              This isn't vaporware. Here's the technical plan.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <AnimatedSection delay={0}>
-              <Card className="border-border/50 hover:border-primary/30 transition-all duration-300 h-full flex flex-col">
-                <CardHeader>
-                  <CardTitle>Free</CardTitle>
-                  <CardDescription>Start automating. No credit card.</CardDescription>
-                  <div className="pt-4">
-                    <span className="text-4xl font-bold">$0</span>
-                    <span className="text-muted-foreground">/month</span>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4 flex-1">
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span className="text-sm">5 automations</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span className="text-sm">Basic dashboard</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span className="text-sm">Email support</span>
-                    </div>
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full" variant="outline" asChild>
-                    <a href="#cta">Start Free</a>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </AnimatedSection>
+          <div className="space-y-8">
+            <div className="relative">
+              <img
+                src="/command_center_refined_v2.png"
+                alt="Astro AI Architecture Diagram"
+                className="rounded-lg border border-border/50 shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent rounded-lg" />
+            </div>
 
-            <AnimatedSection delay={100}>
-              <Card className="border-primary/50 shadow-lg shadow-primary/20 relative hover:shadow-primary/30 transition-all duration-300 h-full flex flex-col">
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  Most Popular
-                </Badge>
-                <CardHeader>
-                  <CardTitle>Pro</CardTitle>
-                  <CardDescription>Scale up. More power, less hassle.</CardDescription>
-                  <div className="pt-4">
-                    <span className="text-4xl font-bold">$50</span>
-                    <span className="text-muted-foreground">/month</span>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4 flex-1">
-                  <div className="text-sm font-medium">Everything in Free, plus:</div>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span className="text-sm">Unlimited automations</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span className="text-sm">AI insights</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span className="text-sm">Priority support</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span className="text-sm">Custom workflows</span>
-                    </div>
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full" asChild>
-                    <a href="#cta">Start Free Trial</a>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </AnimatedSection>
-
-            <AnimatedSection delay={200}>
-              <Card className="border-border/50 hover:border-accent/30 transition-all duration-300 h-full flex flex-col">
-                <CardHeader>
-                  <CardTitle>Agency</CardTitle>
-                  <CardDescription>For agencies juggling client chaos.</CardDescription>
-                  <div className="pt-4">
-                    <span className="text-4xl font-bold">$200</span>
-                    <span className="text-muted-foreground">/month</span>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4 flex-1">
-                  <div className="text-sm font-medium">Everything in Pro, plus:</div>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span className="text-sm">White-label portal</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span className="text-sm">Team collaboration</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span className="text-sm">API access</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span className="text-sm">Dedicated support</span>
-                    </div>
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full" variant="outline" asChild>
-                    <a href="#cta">Contact Sales</a>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section id="cta" className="py-20 lg:py-32 bg-gradient-to-b from-primary/10 to-transparent">
-        <div className="container">
-          <AnimatedSection>
-            <Card className="border-border/50 bg-card/80 backdrop-blur">
-              <CardHeader className="text-center space-y-4">
-                <CardTitle className="text-3xl lg:text-4xl">
-                  Ready to Automate Your Workflow?
-                </CardTitle>
-                <CardDescription className="text-lg">
-                  Join hundreds of freelancers and agencies saving hours every week.
-                </CardDescription>
+            <Card className="bg-card/50 backdrop-blur">
+              <CardHeader>
+                <CardTitle className="text-2xl">Core Components</CardTitle>
               </CardHeader>
-              <CardContent className="flex flex-col items-center gap-6">
-                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
-                  <div className="relative flex-1">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                    <input
-                      type="email"
-                      placeholder="Enter your email"
-                      className="w-full pl-10 pr-4 py-3 rounded-lg bg-background border border-input focus:outline-none focus:ring-2 focus:ring-ring transition-all"
-                    />
+              <CardContent className="space-y-6">
+                <div className="grid md:grid-cols-3 gap-6 text-sm">
+                  <div>
+                    <h4 className="font-semibold mb-2 text-primary">Workflow Engine</h4>
+                    <p className="text-muted-foreground">Event-driven orchestration with DAG-based execution and automatic retry logic</p>
                   </div>
-                  <Button size="lg" className="sm:w-auto">
-                    Start Free Trial
-                  </Button>
+                  <div>
+                    <h4 className="font-semibold mb-2 text-primary">Integration Layer</h4>
+                    <p className="text-muted-foreground">Pre-built connectors for 100+ services with OAuth 2.0 and API key management</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2 text-primary">Data Pipeline</h4>
+                    <p className="text-muted-foreground">Real-time ETL with schema validation and transformation rules</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2 text-primary">AI Engine</h4>
+                    <p className="text-muted-foreground">Pattern recognition and anomaly detection for workflow optimization</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2 text-primary">Security Framework</h4>
+                    <p className="text-muted-foreground">Zero-trust with end-to-end encryption and role-based access control</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2 text-primary">Monitoring System</h4>
+                    <p className="text-muted-foreground">Real-time observability with distributed tracing and alerting</p>
+                  </div>
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  No credit card required. 5 automations free forever.
-                </p>
+                <div className="pt-4 border-t border-border/50">
+                  <a href="/features" className="text-primary hover:underline text-sm font-medium">
+                    Read the full technical specification →
+                  </a>
+                </div>
               </CardContent>
             </Card>
-          </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Development Roadmap */}
+      <section id="roadmap" className="py-20 lg:py-32">
+        <div className="container max-w-5xl">
+          <div className="text-center space-y-4 mb-16">
+            <Badge variant="secondary" className="w-fit mx-auto">
+              <TrendingUp className="w-3 h-3 mr-1" />
+              Development Roadmap
+            </Badge>
+            <h2 className="text-3xl lg:text-5xl font-bold">
+              The Path Forward
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Honest timeline. No false promises.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <Card className="bg-primary/10 border-primary/50">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <CardTitle>Phase 1: Foundation</CardTitle>
+                  <Badge>Current Phase</Badge>
+                </div>
+                <CardDescription>Q1-Q2 2025</CardDescription>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground space-y-2">
+                <p>✓ Technical architecture design</p>
+                <p>✓ Security framework specification</p>
+                <p>→ Core workflow engine development</p>
+                <p>→ Basic integration connectors</p>
+                <p>→ Alpha testing with early adopters</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/50 backdrop-blur">
+              <CardHeader>
+                <CardTitle>Phase 2: Core Platform</CardTitle>
+                <CardDescription>Q3-Q4 2025</CardDescription>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground space-y-2">
+                <p>→ No-code workflow builder</p>
+                <p>→ Expanded integration library</p>
+                <p>→ User authentication and access control</p>
+                <p>→ Beta launch with limited users</p>
+                <p>→ Security audit and compliance certification</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/50 backdrop-blur">
+              <CardHeader>
+                <CardTitle>Phase 3: Public Launch</CardTitle>
+                <CardDescription>Q1 2026</CardDescription>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground space-y-2">
+                <p>→ Public beta with free tier</p>
+                <p>→ AI-powered insights and optimization</p>
+                <p>→ Team collaboration features</p>
+                <p>→ Enterprise-grade SLA</p>
+                <p>→ Community-driven feature development</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 p-6 border border-border/50 rounded-lg bg-muted/20">
+            <p className="text-sm text-muted-foreground text-center">
+              <strong className="text-foreground">Transparency commitment:</strong> This roadmap will be updated monthly with progress reports. No hiding. No excuses.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Statement */}
+      <section className="py-20 lg:py-32 bg-muted/30">
+        <div className="container max-w-4xl">
+          <div className="text-center space-y-8">
+            <Badge variant="secondary" className="w-fit mx-auto">
+              <Shield className="w-3 h-3 mr-1" />
+              Our Mission
+            </Badge>
+            <h2 className="text-3xl lg:text-5xl font-bold">
+              Building for the Public Good
+            </h2>
+            <div className="prose prose-invert max-w-none text-lg text-muted-foreground space-y-6">
+              <p>
+                This isn't about getting rich. It's about building something that makes our country stronger, safer, and more efficient.
+              </p>
+              <p>
+                When institutions like the Library of Congress are threatened and public infrastructure crumbles, we need alternatives. We need systems built by people who care about the public good, not just profit margins.
+              </p>
+              <p>
+                Astro AI is a commitment to building technology that serves citizens, protects data, and strengthens our institutions. It's a vision for what automation could be if we built it right.
+              </p>
+              <p className="text-foreground font-semibold">
+                No product to sell yet. Just a mission and a plan to make it real.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Waitlist CTA */}
+      <section id="waitlist" className="py-20 lg:py-32">
+        <div className="container max-w-3xl">
+          <Card className="border-primary/50 shadow-lg shadow-primary/20 bg-gradient-to-br from-card via-card to-primary/5">
+            <CardHeader className="text-center space-y-4">
+              <Badge variant="secondary" className="w-fit mx-auto">
+                <Mail className="w-3 h-3 mr-1" />
+                Join the Mission
+              </Badge>
+              <CardTitle className="text-3xl">Be Part of Building This</CardTitle>
+              <CardDescription className="text-lg">
+                Get updates on development progress. No spam. No sales pitches. Just honest updates from someone trying to build something that matters.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <form className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Name</label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-2 rounded-md bg-background border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Email</label>
+                    <input
+                      type="email"
+                      className="w-full px-4 py-2 rounded-md bg-background border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="text-sm font-medium mb-2 block">Why are you interested? (optional)</label>
+                  <textarea
+                    rows={3}
+                    className="w-full px-4 py-2 rounded-md bg-background border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                    placeholder="Tell me what resonates with you about this vision..."
+                  ></textarea>
+                </div>
+                <Button type="submit" className="w-full" size="lg">
+                  Join the Waitlist
+                </Button>
+              </form>
+              <div className="text-center text-sm text-muted-foreground space-y-2">
+                <p>No commitment. No payment. Just updates.</p>
+                <p>You can unsubscribe anytime.</p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/40 py-12 mt-auto">
+      <footer className="border-t border-border/40 py-12 bg-muted/20">
         <div className="container">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2">
                 <img src="/astro-ai-logo.png" alt="Astro AI" className="h-6 w-6" />
-                <div className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Astro AI
-                </div>
+                <span className="font-bold text-lg">Astro AI</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Automate your workflow. Scale your business.
+                Building secure automation for the public good.
               </p>
-              <p className="text-xs text-muted-foreground/70">
-                by <span className="text-secondary">Apex Omnis Studio</span>
+              <p className="text-xs text-muted-foreground">
+                by <a href="https://apexomnis.studio" className="text-primary hover:underline">Apex Omnis Studio</a>
               </p>
             </div>
-            <div className="space-y-4">
-              <h4 className="font-semibold">Product</h4>
+
+            <div>
+              <h4 className="font-semibold mb-4">Documentation</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#features" className="hover:text-foreground transition-colors">Features</a></li>
-                <li><a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Integrations</a></li>
+                <li><a href="/features" className="hover:text-foreground transition-colors">Technical Specs</a></li>
+                <li><a href="/pricing" className="hover:text-foreground transition-colors">Roadmap</a></li>
+                <li><a href="/integrations" className="hover:text-foreground transition-colors">Integrations</a></li>
               </ul>
             </div>
-            <div className="space-y-4">
-              <h4 className="font-semibold">Company</h4>
+
+            <div>
+              <h4 className="font-semibold mb-4">About</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
+                <li><a href="/about" className="hover:text-foreground transition-colors">Mission</a></li>
+                <li><a href="/blog" className="hover:text-foreground transition-colors">Research</a></li>
+                <li><a href="/contact" className="hover:text-foreground transition-colors">Contact</a></li>
               </ul>
             </div>
-            <div className="space-y-4">
-              <h4 className="font-semibold">Legal</h4>
+
+            <div>
+              <h4 className="font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-colors">Privacy</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Terms</a></li>
+                <li><a href="/privacy" className="hover:text-foreground transition-colors">Privacy</a></li>
+                <li><a href="/terms" className="hover:text-foreground transition-colors">Terms</a></li>
               </ul>
             </div>
           </div>
+
           <div className="mt-12 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
             <p>© 2025 Astro AI. All rights reserved.</p>
-            <p className="text-xs text-muted-foreground/60 mt-2">
-              A product of <span className="text-secondary">Apex Omnis Studio</span>
-            </p>
+            <p className="mt-2">A product of Apex Omnis Studio</p>
           </div>
         </div>
       </footer>
