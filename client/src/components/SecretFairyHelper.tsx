@@ -265,7 +265,7 @@ export default function SecretFairyHelper() {
                 // Normal Mode
                 <>
                   <p className="text-xs text-muted-foreground leading-relaxed">
-                    I'm your guide through Astro AI. Explore the site to learn about our vision for the public good.
+                    I'm your guide through Apex Commons. Explore the site to learn about our vision for the public good.
                   </p>
                   
                   <div className="bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-lg p-2.5">

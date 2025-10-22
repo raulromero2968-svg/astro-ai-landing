@@ -45,7 +45,7 @@ export default function Features() {
             <h2 className="text-3xl font-bold mb-6">1. Core Services Architecture</h2>
             <div className="space-y-6">
               <p className="text-muted-foreground">
-                Astro AI is built on a distributed service-oriented architecture (SOA) that enables loose coupling, high availability, and horizontal scalability. Each service operates independently with well-defined interfaces and contracts.
+                Apex Commons is built on a distributed service-oriented architecture (SOA) that enables loose coupling, high availability, and horizontal scalability. Each service operates independently with well-defined interfaces and contracts.
               </p>
               
               <Card>

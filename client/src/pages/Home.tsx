@@ -19,9 +19,9 @@ export default function Home() {
       <nav className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container flex h-16 items-center justify-between">
           <a href="/" className="flex items-center gap-2 sm:gap-3">
-            <img src="/astro-ai-logo.png" alt="Astro AI" className="h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0" />
+            <img src="/astro-ai-logo.png" alt="Apex Commons" className="h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0" />
             <div className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
-              Astro AI
+              Apex Commons
             </div>
           </a>
           
@@ -179,14 +179,14 @@ export default function Home() {
               The Vision
             </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold">
-              What Astro AI Will Be
+              What Apex Commons Will Be
             </h2>
           </div>
 
           <div className="space-y-12">
             <div className="prose prose-invert max-w-none">
               <p className="text-xl text-muted-foreground">
-                Astro AI is a vision for enterprise-grade workflow automation that's accessible, secure, and built for the public good. Not a product to sell—a system to build trust in.
+                Apex Commons is a vision for enterprise-grade workflow automation that's accessible, secure, and built for the public good. Not a product to sell—a system to build trust in.
               </p>
             </div>
 
@@ -283,7 +283,7 @@ export default function Home() {
             <div className="relative">
               <img
                 src="/architecture-system-diagram.png"
-                alt="Astro AI System Architecture"
+                alt="Apex Commons System Architecture"
                 className="rounded-lg border border-border/50 shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent rounded-lg" />
@@ -433,7 +433,7 @@ export default function Home() {
                 When institutions like the Library of Congress are threatened and public infrastructure crumbles, we need alternatives. We need systems built by people who care about the public good, not just profit margins.
               </p>
               <p>
-                Astro AI is a commitment to building technology that serves citizens, protects data, and strengthens our institutions. It's a vision for what automation could be if we built it right.
+                Apex Commons is a commitment to building technology that serves citizens, protects data, and strengthens our institutions. It's a vision for what automation could be if we built it right.
               </p>
               <p className="text-foreground font-semibold">
                 No product to sell yet. Just a mission and a plan to make it real.
@@ -470,8 +470,8 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                <img src="/astro-ai-logo.png" alt="Astro AI" className="h-6 w-6" />
-                <span className="font-bold text-lg">Astro AI</span>
+                <img src="/astro-ai-logo.png" alt="Apex Commons" className="h-6 w-6" />
+                <span className="font-bold text-lg">Apex Commons</span>
               </div>
               <p className="text-sm text-muted-foreground">
                 Building secure automation for the public good.
@@ -509,7 +509,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
-            <p>© 2025 Astro AI. All rights reserved.</p>
+            <p>© 2025 Apex Commons. All rights reserved.</p>
             <p className="mt-2">A product of Apex Omnis Studio</p>
           </div>
         </div>

@@ -17,14 +17,14 @@ export default function Terms() {
           <section>
             <h2 className="text-2xl font-bold mb-4">1. Acceptance of Terms</h2>
             <p className="text-muted-foreground">
-              By accessing or using Astro AI's services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services.
+              By accessing or using Apex Commons's services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">2. Service Description</h2>
             <p className="text-muted-foreground">
-              Astro AI provides workflow automation and integration services. We reserve the right to modify, suspend, or discontinue any part of the service at any time with reasonable notice.
+              Apex Commons provides workflow automation and integration services. We reserve the right to modify, suspend, or discontinue any part of the service at any time with reasonable notice.
             </p>
           </section>
 
@@ -72,7 +72,7 @@ export default function Terms() {
           <section>
             <h2 className="text-2xl font-bold mb-4">7. Limitation of Liability</h2>
             <p className="text-muted-foreground">
-              To the maximum extent permitted by law, Astro AI shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of the service.
+              To the maximum extent permitted by law, Apex Commons shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of the service.
             </p>
           </section>
 

@@ -16,9 +16,9 @@ export default function Layout({ children }: LayoutProps) {
       <nav className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-background/95">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 sm:gap-3">
-              <img src="/astro-ai-logo.png" alt="Astro AI" className="h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0" />
+              <img src="/astro-ai-logo.png" alt="Apex Commons" className="h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0" />
               <div className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
-                Astro AI
+                Apex Commons
               </div>
           </Link>
           
@@ -77,9 +77,9 @@ export default function Layout({ children }: LayoutProps) {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <img src="/astro-ai-logo.png" alt="Astro AI" className="h-6 w-6" />
+                <img src="/astro-ai-logo.png" alt="Apex Commons" className="h-6 w-6" />
                 <div className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Astro AI
+                  Apex Commons
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">
@@ -114,7 +114,7 @@ export default function Layout({ children }: LayoutProps) {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
-            <p>© 2025 Astro AI. All rights reserved.</p>
+            <p>© 2025 Apex Commons. All rights reserved.</p>
             <p className="text-xs text-muted-foreground/60 mt-2">
               A product of <span className="text-secondary">Apex Omnis Studio</span>
             </p>

@@ -13,7 +13,7 @@ export default function Blog() {
         <div className="mb-12">
           <h1 className="text-4xl font-bold mb-4">Blog & Resources</h1>
           <p className="text-xl text-muted-foreground">
-            Insights, tutorials, and updates from the Astro AI team.
+            Insights, tutorials, and updates from the Apex Commons team.
           </p>
         </div>
 

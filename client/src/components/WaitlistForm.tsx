@@ -13,7 +13,7 @@ export function WaitlistForm() {
     onSuccess: () => {
       setIsSubmitted(true);
       toast.success("Welcome to the waitlist!", {
-        description: "You'll receive updates as we build Astro AI.",
+        description: "You'll receive updates as we build Apex Commons.",
       });
       setName("");
       setEmail("");

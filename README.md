@@ -1,6 +1,6 @@
-# Astro AI Landing Page
+# Apex Commons Landing Page
 
-A premium, production-ready landing page for Astro AI - an AI-powered automation platform for freelancers and agencies.
+A premium, production-ready landing page for Apex Commons - an AI-powered automation platform for freelancers and agencies.
 
 ## 🎨 Design Features
 
@@ -171,7 +171,7 @@ pnpm build
 
 ## 🤝 Brand Guidelines
 
-**Astro AI Brand Identity:**
+**Apex Commons Brand Identity:**
 - Premium, clean, sophisticated
 - High-contrast dark theme
 - Wolf branding (geometric, modern)
@@ -180,7 +180,7 @@ pnpm build
 
 ## 📄 License
 
-© 2025 Astro AI. All rights reserved.
+© 2025 Apex Commons. All rights reserved.
 
 ---
 

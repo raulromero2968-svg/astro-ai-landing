@@ -10,7 +10,7 @@ export default function About() {
         </nav>
 
         <div className="mb-12">
-          <h1 className="text-4xl font-bold mb-4">About Astro AI</h1>
+          <h1 className="text-4xl font-bold mb-4">About Apex Commons</h1>
           <p className="text-xl text-muted-foreground">
             Enterprise automation platform built for the future of work.
           </p>
@@ -20,7 +20,7 @@ export default function About() {
           <section>
             <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
             <p className="text-muted-foreground">
-              Astro AI was founded on the principle that automation should empower people, not replace them. We believe that by automating repetitive tasks, professionals can focus on creative work that truly matters—building relationships, solving complex problems, and driving innovation.
+              Apex Commons was founded on the principle that automation should empower people, not replace them. We believe that by automating repetitive tasks, professionals can focus on creative work that truly matters—building relationships, solving complex problems, and driving innovation.
             </p>
             <p className="text-muted-foreground">
               Our platform is designed to be accessible to organizations of all sizes, from solo freelancers to large enterprises, with transparent pricing and no vendor lock-in.
@@ -71,7 +71,7 @@ export default function About() {
           <section>
             <h2 className="text-2xl font-bold mb-4">Technology Stack</h2>
             <p className="text-muted-foreground mb-4">
-              Astro AI is built on modern, battle-tested technologies designed for scale and reliability:
+              Apex Commons is built on modern, battle-tested technologies designed for scale and reliability:
             </p>
             <ul className="text-muted-foreground space-y-2">
               <li>• <strong>Microservices Architecture:</strong> Distributed services with independent scaling and deployment</li>
@@ -85,7 +85,7 @@ export default function About() {
           <section>
             <h2 className="text-2xl font-bold mb-4">A Product of Apex Omnis Studio</h2>
             <p className="text-muted-foreground">
-              Astro AI is developed and maintained by <strong>Apex Omnis Studio</strong>, a technology company focused on building tools that enhance human capability rather than replace it. We believe in creating sustainable, ethical technology that serves the public good.
+              Apex Commons is developed and maintained by <strong>Apex Omnis Studio</strong>, a technology company focused on building tools that enhance human capability rather than replace it. We believe in creating sustainable, ethical technology that serves the public good.
             </p>
           </section>
         </div>
