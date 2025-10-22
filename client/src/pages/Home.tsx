@@ -25,8 +25,8 @@ export default function Home() {
             </div>
           </a>
           
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-4 lg:gap-6">
+          {/* Desktop Navigation - Only show on larger tablets and desktop */}
+          <div className="hidden lg:flex items-center gap-6">
             <a href="/features" className="text-sm font-medium hover:text-primary transition-colors">Technical Specs</a>
             <a href="/pricing" className="text-sm font-medium hover:text-primary transition-colors">Roadmap</a>
             <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">Mission</a>
@@ -37,9 +37,9 @@ export default function Home() {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Show on mobile and tablets */}
           <button
-            className="md:hidden p-2"
+            className="lg:hidden p-2 hover:bg-primary/10 rounded-md transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -49,7 +49,7 @@ export default function Home() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-border/40 bg-background">
+          <div className="lg:hidden border-t border-border/40 bg-background/95 backdrop-blur-sm">
             <div className="container py-4 flex flex-col gap-4">
               <a href="/features" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Technical Specs</a>
               <a href="/pricing" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Roadmap</a>
