@@ -10,12 +10,12 @@ export default function Home() {
       {/* Navigation */}
       <nav className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-3">
-            <img src="/astro-ai-logo.png" alt="Astro AI" className="h-8 w-8" />
-            <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <a href="/" className="flex items-center gap-3">
+            <img src="/astro-ai-logo.png" alt="Astro AI" className="h-8 w-8 flex-shrink-0" />
+            <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
               Astro AI
             </div>
-          </div>
+          </a>
           <div className="flex items-center gap-4">
             <Button variant="ghost" asChild>
               <a href="#features">Features</a>
