@@ -16,15 +16,15 @@ export default function Home() {
               Astro AI
             </div>
           </a>
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" asChild>
-              <a href="#features">Features</a>
-            </Button>
-            <Button variant="ghost" asChild>
-              <a href="#pricing">Pricing</a>
-            </Button>
-            <Button asChild>
-              <a href="#cta">Start Free</a>
+          <div className="flex items-center gap-6">
+            <a href="/features" className="text-sm font-medium hover:text-primary transition-colors">Features</a>
+            <a href="/pricing" className="text-sm font-medium hover:text-primary transition-colors">Pricing</a>
+            <a href="/integrations" className="text-sm font-medium hover:text-primary transition-colors">Integrations</a>
+            <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</a>
+            <a href="/blog" className="text-sm font-medium hover:text-primary transition-colors">Blog</a>
+            <a href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+            <Button size="sm" asChild>
+              <a href="#signup">Start Free</a>
             </Button>
           </div>
         </div>
