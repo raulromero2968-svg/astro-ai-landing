@@ -1,21 +1,18 @@
 {
-  "buildCommand": "pnpm install --recursive && pnpm run build",
+  "buildCommand": "pnpm --filter client build && pnpm run build:server",
   "installCommand": "pnpm install --recursive",
   "framework": null,
-  "outputDirectory": "dist/public",
+  "outputDirectory": "client/dist",
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/serverless"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/api/index"
     }
   ],
   "functions": {
-    "api/serverless.js": {
-      "runtime": "nodejs20.x"
+    "api/index.js": {
+      "runtime": "nodejs20.x",
+      "maxDuration": 10
     }
   }
 }
