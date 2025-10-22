@@ -242,8 +242,8 @@ export default function Home() {
           <div className="space-y-8">
             <div className="relative">
               <img
-                src="/command_center_refined_v2.png"
-                alt="Astro AI Architecture Diagram"
+                src="/architecture-system-diagram.png"
+                alt="Astro AI System Architecture"
                 className="rounded-lg border border-border/50 shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent rounded-lg" />
@@ -254,30 +254,42 @@ export default function Home() {
                 <CardTitle className="text-2xl">Core Components</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="grid md:grid-cols-3 gap-6 text-sm">
-                  <div>
-                    <h4 className="font-semibold mb-2 text-primary">Workflow Engine</h4>
-                    <p className="text-muted-foreground">Event-driven orchestration with DAG-based execution and automatic retry logic</p>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="space-y-3">
+                    <img src="/workflow-engine-core.png" alt="Workflow Orchestration Engine" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
+                    <div>
+                      <h4 className="font-semibold text-sm text-primary">Workflow Engine</h4>
+                      <p className="text-xs text-muted-foreground">DAG-based execution with automatic retry logic</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-2 text-primary">Integration Layer</h4>
-                    <p className="text-muted-foreground">Pre-built connectors for 100+ services with OAuth 2.0 and API key management</p>
+                  <div className="space-y-3">
+                    <img src="/data-flow-visualization.png" alt="Data Pipeline" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
+                    <div>
+                      <h4 className="font-semibold text-sm text-primary">Data Pipeline</h4>
+                      <p className="text-xs text-muted-foreground">Real-time ETL with transformation rules</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-2 text-primary">Data Pipeline</h4>
-                    <p className="text-muted-foreground">Real-time ETL with schema validation and transformation rules</p>
+                  <div className="space-y-3">
+                    <img src="/security-layers.png" alt="Security Framework" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
+                    <div>
+                      <h4 className="font-semibold text-sm text-primary">Security Framework</h4>
+                      <p className="text-xs text-muted-foreground">Zero-trust with end-to-end encryption</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-2 text-primary">AI Engine</h4>
-                    <p className="text-muted-foreground">Pattern recognition and anomaly detection for workflow optimization</p>
+                  <div className="space-y-3">
+                    <img src="/global-infrastructure.png" alt="Global Infrastructure" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
+                    <div>
+                      <h4 className="font-semibold text-sm text-primary">Global Infrastructure</h4>
+                      <p className="text-xs text-muted-foreground">Multi-region deployment with 99.99% uptime</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-2 text-primary">Security Framework</h4>
-                    <p className="text-muted-foreground">Zero-trust with end-to-end encryption and role-based access control</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2 text-primary">Monitoring System</h4>
-                    <p className="text-muted-foreground">Real-time observability with distributed tracing and alerting</p>
+                  <div className="space-y-3 md:col-span-2 lg:col-span-1">
+                    <div className="h-full flex items-center justify-center bg-muted/20 rounded-lg border border-border/50 p-6">
+                      <div className="text-center space-y-2">
+                        <h4 className="font-semibold text-sm text-primary">+ More Components</h4>
+                        <p className="text-xs text-muted-foreground">Integration Layer, AI Engine, Monitoring System</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="pt-4 border-t border-border/50">
