@@ -39,11 +39,16 @@ export default function Home() {
 
           {/* Mobile Menu Button - Show on mobile and tablets */}
           <button
-            className="lg:hidden p-2 hover:bg-primary/10 rounded-md transition-colors"
+            className="lg:hidden p-3 bg-primary/20 hover:bg-primary/30 rounded-md transition-colors border border-primary/40"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
+            type="button"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6 text-primary" />
+            ) : (
+              <Menu className="w-6 h-6 text-primary" />
+            )}
           </button>
         </div>
 
