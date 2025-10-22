@@ -15,37 +15,23 @@ export default function Layout({ children }: LayoutProps) {
       {/* Navigation */}
       <nav className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-background/95">
         <div className="container flex h-16 items-center justify-between">
-          <Link href="/">
-            <a className="flex items-center gap-2 sm:gap-3">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3">
               <img src="/astro-ai-logo.png" alt="Astro AI" className="h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0" />
               <div className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
                 Astro AI
               </div>
-            </a>
           </Link>
           
           {/* Desktop Navigation - Only show on larger tablets and desktop */}
           <div className="desktop-nav items-center gap-6">
-            <Link href="/features">
-              <a className="text-sm font-medium hover:text-primary transition-colors">Technical Specs</a>
-            </Link>
-            <Link href="/pricing">
-              <a className="text-sm font-medium hover:text-primary transition-colors">Roadmap</a>
-            </Link>
-            <Link href="/about">
-              <a className="text-sm font-medium hover:text-primary transition-colors">Mission</a>
-            </Link>
-            <Link href="/blog">
-              <a className="text-sm font-medium hover:text-primary transition-colors">Research</a>
-            </Link>
-            <Link href="/contact">
-              <a className="text-sm font-medium hover:text-primary transition-colors">Contact</a>
-            </Link>
-            <Link href="/#waitlist">
-              <a>
-                <Button size="sm">Join Waitlist</Button>
-              </a>
-            </Link>
+            <Link href="/features" className="text-sm font-medium hover:text-primary transition-colors">Technical Specs</Link>
+            <Link href="/pricing" className="text-sm font-medium hover:text-primary transition-colors">Roadmap</Link>
+            <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">Mission</Link>
+            <Link href="/blog" className="text-sm font-medium hover:text-primary transition-colors">Research</Link>
+            <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
+            <a href="/#waitlist">
+              <Button size="sm">Join Waitlist</Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button - Show on mobile and tablets */}
@@ -67,26 +53,14 @@ export default function Layout({ children }: LayoutProps) {
         {mobileMenuOpen && (
           <div className="mobile-nav border-t border-border/40 bg-background/95 backdrop-blur-sm w-full overflow-hidden">
             <div className="container py-4 flex flex-col gap-4 max-w-full">
-              <Link href="/features">
-                <a className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Technical Specs</a>
-              </Link>
-              <Link href="/pricing">
-                <a className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Roadmap</a>
-              </Link>
-              <Link href="/about">
-                <a className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Mission</a>
-              </Link>
-              <Link href="/blog">
-                <a className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Research</a>
-              </Link>
-              <Link href="/contact">
-                <a className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-              </Link>
-              <Link href="/#waitlist">
-                <a onClick={() => setMobileMenuOpen(false)}>
-                  <Button size="sm" className="w-full">Join Waitlist</Button>
-                </a>
-              </Link>
+              <Link href="/features" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Technical Specs</Link>
+              <Link href="/pricing" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Roadmap</Link>
+              <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Mission</Link>
+              <Link href="/blog" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Research</Link>
+              <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+              <a href="/#waitlist" onClick={() => setMobileMenuOpen(false)}>
+                <Button size="sm" className="w-full">Join Waitlist</Button>
+              </a>
             </div>
           </div>
         )}
@@ -118,24 +92,24 @@ export default function Layout({ children }: LayoutProps) {
             <div className="space-y-4">
               <h4 className="font-semibold">Product</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="/features"><a className="hover:text-foreground transition-colors">Features</a></Link></li>
-                <li><Link href="/pricing"><a className="hover:text-foreground transition-colors">Pricing</a></Link></li>
-                <li><Link href="/integrations"><a className="hover:text-foreground transition-colors">Integrations</a></Link></li>
+                <li><Link href="/features" className="hover:text-foreground transition-colors">Features</Link></li>
+                <li><Link href="/pricing" className="hover:text-foreground transition-colors">Pricing</Link></li>
+                <li><Link href="/integrations" className="hover:text-foreground transition-colors">Integrations</Link></li>
               </ul>
             </div>
             <div className="space-y-4">
               <h4 className="font-semibold">Company</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="/about"><a className="hover:text-foreground transition-colors">About</a></Link></li>
-                <li><Link href="/blog"><a className="hover:text-foreground transition-colors">Blog</a></Link></li>
-                <li><Link href="/contact"><a className="hover:text-foreground transition-colors">Contact</a></Link></li>
+                <li><Link href="/about" className="hover:text-foreground transition-colors">About</Link></li>
+                <li><Link href="/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
+                <li><Link href="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
               </ul>
             </div>
             <div className="space-y-4">
               <h4 className="font-semibold">Legal</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="/privacy"><a className="hover:text-foreground transition-colors">Privacy</a></Link></li>
-                <li><Link href="/terms"><a className="hover:text-foreground transition-colors">Terms</a></Link></li>
+                <li><Link href="/privacy" className="hover:text-foreground transition-colors">Privacy</Link></li>
+                <li><Link href="/terms" className="hover:text-foreground transition-colors">Terms</Link></li>
               </ul>
             </div>
           </div>
