@@ -26,7 +26,7 @@ export default function Home() {
           </a>
           
           {/* Desktop Navigation - Only show on larger tablets and desktop */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="desktop-nav items-center gap-6">
             <a href="/features" className="text-sm font-medium hover:text-primary transition-colors">Technical Specs</a>
             <a href="/pricing" className="text-sm font-medium hover:text-primary transition-colors">Roadmap</a>
             <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">Mission</a>
@@ -39,22 +39,23 @@ export default function Home() {
 
           {/* Mobile Menu Button - Show on mobile and tablets */}
           <button
-            className="lg:hidden p-3 bg-primary/20 hover:bg-primary/30 rounded-md transition-colors border border-primary/40"
+            className="mobile-menu-btn p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
             type="button"
+            style={{ display: 'none' }}
           >
             {mobileMenuOpen ? (
-              <X className="w-6 h-6 text-primary" />
+              <X className="w-6 h-6" />
             ) : (
-              <Menu className="w-6 h-6 text-primary" />
+              <Menu className="w-6 h-6" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-border/40 bg-background/95 backdrop-blur-sm">
+          <div className="mobile-nav border-t border-border/40 bg-background/95 backdrop-blur-sm" style={{ display: 'none' }}>
             <div className="container py-4 flex flex-col gap-4">
               <a href="/features" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Technical Specs</a>
               <a href="/pricing" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Roadmap</a>

@@ -211,4 +211,29 @@
       max-width: 1280px; /* Standard content width */
     }
   }
+  
+  /* Mobile navigation - explicit media queries for iOS Safari compatibility */
+  @media (max-width: 1023px) {
+    .desktop-nav {
+      display: none !important;
+    }
+    .mobile-menu-btn {
+      display: block !important;
+    }
+    .mobile-nav {
+      display: block !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .desktop-nav {
+      display: flex !important;
+    }
+    .mobile-menu-btn {
+      display: none !important;
+    }
+    .mobile-nav {
+      display: none !important;
+    }
+  }
 }
