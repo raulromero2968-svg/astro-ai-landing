@@ -54,8 +54,8 @@ export default function Home() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="mobile-nav border-t border-border/40 bg-background/95 backdrop-blur-sm">
-            <div className="container py-4 flex flex-col gap-4">
+          <div className="mobile-nav border-t border-border/40 bg-background/95 backdrop-blur-sm w-full overflow-hidden">
+            <div className="container py-4 flex flex-col gap-4 max-w-full">
               <a href="/features" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Technical Specs</a>
               <a href="/pricing" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Roadmap</a>
               <a href="/about" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Mission</a>
