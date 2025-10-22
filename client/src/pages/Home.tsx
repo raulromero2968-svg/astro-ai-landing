@@ -10,7 +10,8 @@ export default function Home() {
       {/* Navigation */}
       <nav className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
+            <img src="/astro-ai-logo.png" alt="Astro AI" className="h-8 w-8" />
             <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Astro AI
             </div>
@@ -340,8 +341,11 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <div className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Astro AI
+              <div className="flex items-center gap-3">
+                <img src="/astro-ai-logo.png" alt="Astro AI" className="h-6 w-6" />
+                <div className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  Astro AI
+                </div>
               </div>
               <p className="text-sm text-muted-foreground">
                 Automate your workflow. Scale your business.
