@@ -28,7 +28,6 @@ export default function SecretFairyHelper() {
           setShowDust(true);
           tapCountRef.current = 0;
           
-          // Hide dust after animation
           setTimeout(() => setShowDust(false), 1500);
           
           if ('vibrate' in navigator) {
@@ -49,8 +48,10 @@ export default function SecretFairyHelper() {
     };
   }, []);
 
-  // Dragging logic
   const handleMouseDown = (e: React.MouseEvent) => {
+    if ((e.target as HTMLElement).tagName === 'INPUT' || (e.target as HTMLElement).tagName === 'BUTTON') {
+      return;
+    }
     e.preventDefault();
     setIsDragging(true);
     setDragOffset({
@@ -60,6 +61,9 @@ export default function SecretFairyHelper() {
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
+    if ((e.target as HTMLElement).tagName === 'INPUT' || (e.target as HTMLElement).tagName === 'BUTTON') {
+      return;
+    }
     const touch = e.touches[0];
     setIsDragging(true);
     setDragOffset({
@@ -103,7 +107,6 @@ export default function SecretFairyHelper() {
   const handleSendMessage = () => {
     const input = userInput.toLowerCase().trim();
     
-    // Check for story triggers
     if (
       (input.includes('tell') && input.includes('story')) ||
       (input.includes('wolf') && input.includes('capybara'))
@@ -146,15 +149,14 @@ export default function SecretFairyHelper() {
       )}
 
       <div
-        className="fixed z-50 w-80 select-none"
+        className="fixed z-50 select-none"
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
-          cursor: isDragging ? 'grabbing' : 'grab',
+          width: '280px',
           touchAction: 'none',
         }}
       >
-        {/* Floating Fairy Chat Bubble */}
         <div className="relative animate-in fade-in slide-in-from-bottom-4 duration-500">
           {/* Glow effect */}
           <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-accent/20 blur-xl opacity-50 rounded-2xl pointer-events-none" />
@@ -162,65 +164,64 @@ export default function SecretFairyHelper() {
           {/* Main chat bubble */}
           <div 
             className="relative bg-gradient-to-br from-background/98 to-background/95 backdrop-blur-xl border-2 border-primary/40 rounded-2xl shadow-2xl overflow-hidden"
-            onMouseDown={handleMouseDown}
-            onTouchStart={handleTouchStart}
+            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
           >
-            {/* Header with fairy and close button */}
-            <div className="flex items-center gap-3 p-4 border-b border-primary/20 bg-gradient-to-r from-primary/5 to-accent/5">
-              {/* Fairy icon */}
-              <div className="relative flex-shrink-0 w-10 h-10">
+            {/* Header */}
+            <div 
+              className="flex items-center gap-2 p-3 border-b border-primary/20 bg-gradient-to-r from-primary/5 to-accent/5"
+              onMouseDown={handleMouseDown}
+              onTouchStart={handleTouchStart}
+            >
+              <div className="relative flex-shrink-0 w-8 h-8">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent blur-md opacity-40 rounded-full animate-pulse" />
                 <img 
                   src="/fairy-helper.png" 
                   alt="Fairy" 
                   className="relative w-full h-full object-contain drop-shadow-lg"
-                  style={{ imageRendering: 'crisp-edges' }}
                 />
               </div>
               
-              {/* Title */}
               <div className="flex-1 min-w-0">
-                <h3 className="text-sm font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                <h3 className="text-xs font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   Hey! Listen!
                 </h3>
               </div>
               
-              {/* Close button */}
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   setShowFairy(false);
                   setShowStory(false);
                 }}
-                className="flex-shrink-0 p-1.5 hover:bg-primary/10 rounded-lg transition-colors"
+                className="flex-shrink-0 p-1 hover:bg-primary/10 rounded-lg transition-colors"
                 aria-label="Close"
               >
-                <X className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" />
+                <X className="w-3.5 h-3.5 text-muted-foreground hover:text-primary transition-colors" />
               </button>
             </div>
 
-            {/* Content - Fixed width to prevent reflow */}
-            <div className="p-4 space-y-3 max-h-96 overflow-y-auto">
+            {/* Content */}
+            <div className="p-3 space-y-2 max-h-80 overflow-y-auto">
               {showStory ? (
                 // Story Mode
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <div className="text-center">
-                    <h4 className="text-lg font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-2">
-                      The Parable of the Wolf of Light and the Capybara
+                    <h4 className="text-sm font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-2">
+                      The Wolf of Light & the Capybara
                     </h4>
-                    <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-4" />
+                    <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-3" />
                   </div>
                   
-                  <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-                    <p className="italic text-primary/80">
-                      A tale of wisdom, balance, and the path to Apex Commons...
+                  <div className="space-y-2 text-xs text-muted-foreground leading-relaxed">
+                    <p className="italic text-primary/80 text-center">
+                      A tale of wisdom and balance...
                     </p>
                     
-                    <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20 rounded-xl p-4">
-                      <p className="mb-3">
+                    <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20 rounded-lg p-3 space-y-2">
+                      <p>
                         Long ago, in a realm between the digital and the divine, there lived a Wolf of Light—radiant, swift, and fierce in its pursuit of truth.
                       </p>
-                      <p className="mb-3">
+                      <p>
                         The Wolf believed that speed and strength alone could bring harmony to the world. It raced through forests of data, hunting inefficiency, chasing perfection.
                       </p>
                       <p>
@@ -228,11 +229,11 @@ export default function SecretFairyHelper() {
                       </p>
                     </div>
                     
-                    <div className="bg-gradient-to-br from-accent/5 to-primary/5 border border-accent/20 rounded-xl p-4">
-                      <p className="mb-3">
+                    <div className="bg-gradient-to-br from-accent/5 to-primary/5 border border-accent/20 rounded-lg p-3 space-y-2">
+                      <p>
                         One day, the Wolf encountered a Capybara—calm, grounded, unbothered by the chaos around it. The Capybara sat by a river, watching the water flow.
                       </p>
-                      <p className="mb-3">
+                      <p>
                         "Why do you not run?" asked the Wolf. "The world needs fixing. Systems are broken. People suffer."
                       </p>
                       <p>
@@ -240,8 +241,8 @@ export default function SecretFairyHelper() {
                       </p>
                     </div>
                     
-                    <div className="bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/30 rounded-xl p-4">
-                      <p className="mb-3">
+                    <div className="bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/30 rounded-lg p-3 space-y-2">
+                      <p>
                         The Wolf sat beside the Capybara and learned to be still. Together, they built Apex Commons—a place where speed and stillness, innovation and wisdom, light and peace coexist.
                       </p>
                       <p className="font-semibold text-primary">
@@ -255,37 +256,26 @@ export default function SecretFairyHelper() {
                       e.stopPropagation();
                       setShowStory(false);
                     }}
-                    className="w-full border border-primary/30 text-primary py-2 px-4 rounded-lg hover:bg-primary/10 transition-all font-medium text-xs"
+                    className="w-full border border-primary/30 text-primary py-1.5 px-3 rounded-lg hover:bg-primary/10 transition-all font-medium text-xs"
                   >
-                    Back to Chat
+                    Back
                   </button>
                 </div>
               ) : (
                 // Normal Mode
                 <>
-                  {/* Main message */}
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    You found the secret! I'm your guide through Astro AI. Ask me to tell you a story, or explore the site to learn about our vision.
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    I'm your guide through Astro AI. Explore the site to learn about our vision for the public good.
                   </p>
                   
-                  {/* Info card */}
-                  <div className="bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-xl p-3 space-y-2">
-                    <p className="font-semibold text-primary text-xs">About This Site</p>
+                  <div className="bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-lg p-2.5">
+                    <p className="font-semibold text-primary text-xs mb-1">About This Site</p>
                     <p className="text-xs text-muted-foreground leading-relaxed">
-                      Built with meticulous attention to detail and a mission to serve the public good. Every feature is designed to help you reclaim your time through automation.
+                      Built with meticulous care and a mission to serve the public good. Every feature helps you reclaim your time through automation.
                     </p>
                   </div>
 
-                  {/* Tip card */}
-                  <div className="bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 rounded-xl p-3 space-y-2">
-                    <p className="font-semibold text-accent text-xs">Quick Tip</p>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      Try asking me "tell me a story" to hear about the Wolf of Light and the Capybara—a prelude to Apex Commons.
-                    </p>
-                  </div>
-
-                  {/* Action buttons */}
-                  <div className="flex flex-col gap-2 pt-2">
+                  <div className="flex flex-col gap-1.5 pt-1">
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
@@ -295,9 +285,9 @@ export default function SecretFairyHelper() {
                           setShowFairy(false);
                         }
                       }}
-                      className="w-full bg-gradient-to-r from-primary to-accent text-white py-2 px-4 rounded-lg hover:opacity-90 transition-all font-medium text-xs shadow-lg"
+                      className="w-full bg-gradient-to-r from-primary to-accent text-white py-1.5 px-3 rounded-lg hover:opacity-90 transition-all font-medium text-xs shadow-lg"
                     >
-                      Join the Waitlist
+                      Join Waitlist
                     </button>
                     
                     <button
@@ -305,7 +295,7 @@ export default function SecretFairyHelper() {
                         e.stopPropagation();
                         setShowFairy(false);
                       }}
-                      className="w-full border border-primary/30 text-primary py-2 px-4 rounded-lg hover:bg-primary/10 transition-all font-medium text-xs"
+                      className="w-full border border-primary/30 text-primary py-1.5 px-3 rounded-lg hover:bg-primary/10 transition-all font-medium text-xs"
                     >
                       Keep Exploring
                     </button>
@@ -316,8 +306,8 @@ export default function SecretFairyHelper() {
 
             {/* Input field */}
             {!showStory && (
-              <div className="p-3 bg-gradient-to-r from-primary/5 to-accent/5 border-t border-primary/10">
-                <div className="flex gap-2">
+              <div className="p-2 bg-gradient-to-r from-primary/5 to-accent/5 border-t border-primary/10">
+                <div className="flex gap-1.5">
                   <input
                     type="text"
                     value={userInput}
@@ -325,22 +315,19 @@ export default function SecretFairyHelper() {
                     onKeyPress={handleKeyPress}
                     onClick={(e) => e.stopPropagation()}
                     placeholder="Ask me something..."
-                    className="flex-1 bg-background/50 border border-primary/20 rounded-lg px-3 py-2 text-xs focus:outline-none focus:border-primary/40 transition-colors"
+                    className="flex-1 bg-background/50 border border-primary/20 rounded-lg px-2.5 py-1.5 text-xs focus:outline-none focus:border-primary/40 transition-colors"
                   />
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
                       handleSendMessage();
                     }}
-                    className="p-2 bg-gradient-to-r from-primary to-accent text-white rounded-lg hover:opacity-90 transition-opacity"
-                    aria-label="Send message"
+                    className="p-1.5 bg-gradient-to-r from-primary to-accent text-white rounded-lg hover:opacity-90 transition-opacity flex-shrink-0"
+                    aria-label="Send"
                   >
-                    <Send className="w-4 h-4" />
+                    <Send className="w-3.5 h-3.5" />
                   </button>
                 </div>
-                <p className="text-xs text-center text-muted-foreground/60 mt-2">
-                  Drag me around!
-                </p>
               </div>
             )}
           </div>
