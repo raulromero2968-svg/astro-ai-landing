@@ -116,7 +116,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <img
-                    src="/blog_scale_refined.png"
+                    src="/feature_automate_workflow.png"
                     alt="Automate workflows"
                     className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300"
                   />
@@ -350,6 +350,9 @@ export default function Home() {
               <p className="text-sm text-muted-foreground">
                 Automate your workflow. Scale your business.
               </p>
+              <p className="text-xs text-muted-foreground/70">
+                by <span className="text-secondary">Apex Omnis Studio</span>
+              </p>
             </div>
             <div className="space-y-4">
               <h4 className="font-semibold">Product</h4>
@@ -376,7 +379,10 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
-            © 2025 Astro AI. All rights reserved.
+            <p>© 2025 Astro AI. All rights reserved.</p>
+            <p className="text-xs text-muted-foreground/60 mt-2">
+              A product of <span className="text-secondary">Apex Omnis Studio</span>
+            </p>
           </div>
         </div>
       </footer>
