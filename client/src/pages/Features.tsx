@@ -316,9 +316,10 @@ export default function Features() {
               </p>
 
               <img 
-                src="/feature_ai_insights.png" 
+                src="/ai-intelligence-holographic.png?v=holo2025" 
                 alt="AI intelligence services architecture" 
-                className="rounded-lg border border-border/50 mb-6"
+                className="rounded-lg border border-border/50 mb-6 cursor-pointer hover:scale-[1.02] transition-transform duration-300"
+                onClick={() => window.open('/ai-intelligence-holographic.png?v=holo2025', '_blank')}
               />
 
               <div className="grid md:grid-cols-2 gap-4">
