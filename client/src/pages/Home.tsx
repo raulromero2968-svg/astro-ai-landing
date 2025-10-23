@@ -303,21 +303,21 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <img src="/data-flow-visualization.png" alt="Data Pipeline" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
+                    <img src="/data-flow-visualization.png?v=starry2025" alt="Data Pipeline" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
                     <div>
                       <h4 className="font-semibold text-sm text-primary">Data Pipeline</h4>
                       <p className="text-xs text-muted-foreground">Real-time ETL with transformation rules</p>
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <img src="/security-layers.png" alt="Security Framework" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
+                    <img src="/security-layers.png?v=starry2025" alt="Security Framework" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
                     <div>
                       <h4 className="font-semibold text-sm text-primary">Security Framework</h4>
                       <p className="text-xs text-muted-foreground">Zero-trust with end-to-end encryption</p>
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <img src="/global-infrastructure.png" alt="Global Infrastructure" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
+                    <img src="/global-infrastructure.png?v=starry2025" alt="Global Infrastructure" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
                     <div>
                       <h4 className="font-semibold text-sm text-primary">Global Infrastructure</h4>
                       <p className="text-xs text-muted-foreground">Multi-region deployment with 99.99% uptime</p>
