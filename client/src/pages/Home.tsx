@@ -282,7 +282,7 @@ export default function Home() {
           <div className="space-y-8">
             <div className="relative">
               <img
-                src="/architecture-system-diagram.png"
+                src="/architecture-system-diagram.png?v=purple2025"
                 alt="Apex Commons System Architecture"
                 className="rounded-lg border border-border/50 shadow-2xl"
               />
@@ -317,7 +317,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <img src="/global-infrastructure.png?v=starry2025" alt="Global Infrastructure" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
+                    <img src="/global-infrastructure.png?v=purple2025" alt="Global Infrastructure" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
                     <div>
                       <h4 className="font-semibold text-sm text-primary">Global Infrastructure</h4>
                       <p className="text-xs text-muted-foreground">Multi-region deployment with 99.99% uptime</p>
