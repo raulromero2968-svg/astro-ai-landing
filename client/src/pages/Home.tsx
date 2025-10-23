@@ -296,7 +296,7 @@ export default function Home() {
               <CardContent className="space-y-6">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div className="space-y-3">
-                    <img src="/workflow-engine-core.png?v=final2025" alt="Workflow Orchestration Engine" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
+                    <img src="/workflow-engine-core.png?v=starry2025" alt="Workflow Orchestration Engine" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
                     <div>
                       <h4 className="font-semibold text-sm text-primary">Workflow Engine</h4>
                       <p className="text-xs text-muted-foreground">DAG-based execution with automatic retry logic</p>
