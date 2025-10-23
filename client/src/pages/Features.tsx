@@ -110,7 +110,7 @@ export default function Features() {
               </p>
 
               <img 
-                src="/feature_automate_workflow.png" 
+                src="/automation-workflow-holographic.png?v=holo2025" 
                 alt="Workflow orchestration architecture" 
                 className="rounded-lg border border-border/50 mb-6"
               />
