@@ -467,9 +467,10 @@ export default function Features() {
               </p>
 
               <img 
-                src="/command_center_refined_v2.png" 
+                src="/command-center-ultimate.png?v=final" 
                 alt="Monitoring and observability dashboard" 
-                className="rounded-lg border border-border/50 mb-6"
+                className="rounded-lg border border-border/50 mb-6 cursor-pointer hover:scale-[1.02] transition-transform duration-300"
+                onClick={() => window.open('/command-center-ultimate.png?v=final', '_blank')}
               />
 
               <div className="grid md:grid-cols-3 gap-4">
