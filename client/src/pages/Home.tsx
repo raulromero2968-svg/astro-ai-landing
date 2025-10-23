@@ -282,7 +282,7 @@ export default function Home() {
           <div className="space-y-8">
             <div className="relative">
               <img
-                src="/architecture-system-diagram.png?v=purple2025"
+                src="/architecture-system-diagram.png?v=balanced2025"
                 alt="Apex Commons System Architecture"
                 className="rounded-lg border border-border/50 shadow-2xl"
               />
@@ -310,7 +310,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <img src="/security-layers.png?v=starry2025" alt="Security Framework" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
+                    <img src="/security-layers.png?v=balanced2025" alt="Security Framework" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
                     <div>
                       <h4 className="font-semibold text-sm text-primary">Security Framework</h4>
                       <p className="text-xs text-muted-foreground">Zero-trust with end-to-end encryption</p>
