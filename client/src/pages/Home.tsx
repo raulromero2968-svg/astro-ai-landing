@@ -284,7 +284,7 @@ export default function Home() {
               <img
                 src="/architecture-hero-purple.png?v=notion2025"
                 alt="Apex Commons System Architecture"
-                className="rounded-lg border border-border/50 shadow-2xl"
+                className="rounded-lg border border-border/50 shadow-2xl holographic-image"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent rounded-lg" />
             </div>
@@ -296,28 +296,28 @@ export default function Home() {
               <CardContent className="space-y-6">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div className="space-y-3">
-                    <img src="/workflow-engine-starry.png?v=notion2025" alt="Workflow Orchestration Engine" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
+                    <img src="/workflow-engine-starry.png?v=notion2025" alt="Workflow Orchestration Engine" className="rounded-lg border border-border/50 " />
                     <div>
                       <h4 className="font-semibold text-sm text-primary">Workflow Engine</h4>
                       <p className="text-xs text-muted-foreground">DAG-based execution with automatic retry logic</p>
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <img src="/automation-workflow-holographic.png?v=notion2025" alt="Data Pipeline" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
+                    <img src="/automation-workflow-holographic.png?v=notion2025" alt="Data Pipeline" className="rounded-lg border border-border/50 " />
                     <div>
                       <h4 className="font-semibold text-sm text-primary">Data Pipeline</h4>
                       <p className="text-xs text-muted-foreground">Real-time ETL with transformation rules</p>
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <img src="/security-starry.png?v=notion2025" alt="Security Framework" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
+                    <img src="/security-starry.png?v=notion2025" alt="Security Framework" className="rounded-lg border border-border/50 " />
                     <div>
                       <h4 className="font-semibold text-sm text-primary">Security Framework</h4>
                       <p className="text-xs text-muted-foreground">Zero-trust with end-to-end encryption</p>
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <img src="/ai-intelligence-holographic.png?v=notion2025" alt="AI Intelligence" className="rounded-lg border border-border/50 hover:scale-105 transition-transform duration-300" />
+                    <img src="/ai-intelligence-holographic.png?v=notion2025" alt="AI Intelligence" className="rounded-lg border border-border/50 " />
                     <div>
                       <h4 className="font-semibold text-sm text-primary">AI Intelligence</h4>
                       <p className="text-xs text-muted-foreground">Machine learning and predictive analytics</p>
