@@ -6,6 +6,7 @@ import { Check, Zap, TrendingUp, Target, Mail, Shield, AlertCircle, FileText, Me
 import { useState } from "react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { Starfield } from "@/components/Starfield";
 
 export default function Home() {
   // The userAuth hooks provides authentication state
