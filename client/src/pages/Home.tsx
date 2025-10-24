@@ -477,7 +477,7 @@ export default function Home() {
                 Building secure automation for the public good.
               </p>
               <p className="text-xs text-muted-foreground">
-                by <a href="https://apexomnis.studio" className="text-primary hover:underline">Apex Omnis Studio</a>
+                by <a href="https://apexomnis.io" className="text-primary hover:underline">Apex Omnis Studio</a>
               </p>
             </div>
 
